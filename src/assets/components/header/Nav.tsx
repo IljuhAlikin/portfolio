@@ -29,8 +29,8 @@ const Nav = () => {
             <Link to={link.path} key={index}>
               <li
                 className={`${
-                  link.path == location && "text-green-600"
-                } transition ease-in-out hover:text-green-600 hover:underline `}
+                  link.path == location && "text-green-500"
+                } transition ease-in-out hover:text-green-500 hover:underline text-lg`}
               >
                 {link.name}
               </li>

@@ -12,7 +12,14 @@ const Header = () => {
           </Link>
 
           {/* desktop nav */}
-          <Nav />
+          <div className="hidden xl:flex">
+            <Nav />
+          </div>
+
+          {/* Contact button */}
+          <button className="px-4 py-2 bg-green-500 rounded-md text-white text-lg ">
+            Contact me
+          </button>
         </div>
       </header>
     </>
