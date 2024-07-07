@@ -27,7 +27,11 @@ const Nav = () => {
         {pages.map((link, index) => {
           return (
             <Link to={link.path} key={index}>
-              <li className={`${link.path == location && "text-black"}`}>
+              <li
+                className={`${
+                  link.path == location && "text-green-600"
+                } transition ease-in-out hover:text-green-600 hover:underline `}
+              >
                 {link.name}
               </li>
             </Link>
