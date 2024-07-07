@@ -1,36 +1,39 @@
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 const pages = [
   {
     name: "Home",
-    link: "#",
+    path: "#",
   },
   {
     name: "About",
-    link: "#",
+    path: "/about",
   },
   {
     name: "Projects",
-    link: "#",
+    path: "#",
   },
   {
     name: "Contact",
-    link: "#",
+    path: "#",
   },
 ];
 
 const Nav = () => {
+  let location = useLocation().pathname;
   return (
     <>
-      <nav className="">
-        <div className="">
-          {pages.map((link, index) => {
-            return (
-              <a href={link.link} key={index} className="">
+      <ul className="flex gap-8">
+        {pages.map((link, index) => {
+          return (
+            <Link to={link.path} key={index}>
+              <li className={`${link.path == location && "text-black"}`}>
                 {link.name}
-              </a>
-            );
-          })}
-        </div>
-      </nav>
+              </li>
+            </Link>
+          );
+        })}
+      </ul>
     </>
   );
 };
