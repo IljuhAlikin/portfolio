@@ -13,14 +13,9 @@ const pages = [
     name: "Projects",
     path: "#",
   },
-  {
-    name: "Contact",
-    path: "#",
-  },
 ];
 
 const Nav = () => {
-  let location = useLocation().pathname;
   return (
     <>
       <ul className="flex gap-8">
@@ -28,9 +23,8 @@ const Nav = () => {
           return (
             <Link to={link.path} key={index}>
               <li
-                className={`${
-                  link.path == location && "text-green-500"
-                } transition ease-in-out hover:text-green-500 hover:underline text-lg`}
+                className={`
+                 text-primary-color transition ease-in-out uppercase  hover:underline text-lg`}
               >
                 {link.name}
               </li>
