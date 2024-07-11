@@ -19,8 +19,11 @@ const Buttons = () => {
       <div className="flex justify-between">
         {info.map((item, index) => {
           return (
-            <div>
-              {item.title}, {item.number}
+            <div className="flex gap-2 justify-center align-center">
+              <div className="text-4xl flex align-center font-medium justify-center">
+                {item.number}
+              </div>
+              <div className="max-w-[100px]">{item.title}</div>
             </div>
           );
         })}
