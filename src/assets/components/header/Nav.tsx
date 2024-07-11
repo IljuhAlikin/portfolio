@@ -24,7 +24,7 @@ const Nav = () => {
             <Link to={link.path} key={index}>
               <li
                 className={`
-                 text-primary-color transition ease-in-out uppercase  hover:underline text-lg`}
+                 text-primary-color transition ease-in-out uppercase hover:underline cursor-pointer text-lg`}
               >
                 {link.name}
               </li>
